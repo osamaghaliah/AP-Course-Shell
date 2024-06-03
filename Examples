@@ -1,0 +1,92 @@
+Compiling shell.c into an object file...
+gcc -Wall -Wextra -g -c shell.c -o shell.o
+Compilation of shell.c complete.
+Linking object files to form the essence of shell...
+gcc -Wall -Wextra -g -o shell shell.o
+Creation of shell complete.
+Running shell...
+./shell
+hello: date >> myfile    
+hello: cat myfile
+Sun 02 Jun 2024 04:17:22 PM IDT
+hello: date -u >> myfile
+hello: cat myfile
+Sun 02 Jun 2024 04:17:22 PM IDT
+Sun 02 Jun 2024 01:17:32 PM UTC
+hello: wc -l < myfile
+2
+hello: prompt = hi:
+hi: mkdir mydir
+hi: cd mydir
+Directory has been successfully changed to mydir
+hi: pwd
+/home/osama/Desktop/322509357_316203405/mydir
+hi: touch file1 file2 file3
+hi: ls
+file1  file2  file3
+hi: !!
+file1  file2  file3
+hi: echo abc xyz
+abc xyz 
+hi: ls
+file1  file2  file3
+hi: echo $?
+0
+hi: ls no_such_file
+ls: cannot access 'no_such_file': No such file or directory
+hi: ls no_such_file 2> file
+hi: ^C
+You typed Control-C!
+hi: cat > colors.txt
+blue
+black
+red
+red
+green
+blue
+green
+red
+red
+blue
+hi: cat colors.txt
+blue
+black
+red
+red
+green
+blue
+green
+red
+red
+blue
+hi: cat colors.txt | cat | cat | cat
+blue
+black
+red
+red
+green
+blue
+green
+red
+red
+blue
+hi: sort colors.txt | uniq -c | sort -r | head -3
+      4 red
+      3 blue
+      2 green
+hi: if date | grep Fri
+scripting: then
+scripting: echo A
+scripting: else
+scripting: echo B
+scripting: fi
+B
+hi: if date | grep Sun
+scripting: then 
+scripting: echo A
+scripting: else
+scripting: echo B
+scripting: fi
+Sun 02 Jun 2024 09:38:11 PM IDT
+A
+hi: quit
