@@ -1,4 +1,4 @@
-# Shell
+<h1 align="center"> Shell </h1>
 
 This is a simple shell program implemented in C. It provides basic functionality to handle shell commands, manage environment variables, and execute programs.
 
